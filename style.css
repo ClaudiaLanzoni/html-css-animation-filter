@@ -62,18 +62,59 @@
 
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
+    transition: 0;
+}
+
+.ex-6-img:hover {
+    filter: grayscale(100%);
+}
+
+.ex-7-img {
+    transition: 5s;
+}
+
+.ex-7-img:hover {
+    filter: drop-shadow(30px 30px 30px dodgerblue) blur(1px);
+}
+
+.ex-8-img:hover{
+    filter: hue-rotate(45deg) brightness(2);
+    border-radius: 30px;
 }
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: 0s;
 }
+
+.ex-9-img:hover {
+    filter: sepia(50%) contrast(150%);
+    border-radius: 30px;
+    width: 50%;
+}
+
 .ex-10-icon {
     font-size: 60px;
+    animation: spin 2s linear infinite;
 }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
 .ex-11-icon {
     font-size: 60px;
+    animation: spin 2s infinite;
 }
+
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    75% { transform: rotate(270deg);}
+    100% { transform: rotate(alternate-reverse); }
+  }
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
